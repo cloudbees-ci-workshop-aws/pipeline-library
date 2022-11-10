@@ -1,6 +1,6 @@
 // vars/configBundleUpdate.groovy
-def call(String nameSpace = "cbci") {
-  def bundleName = env.BUNDLE_ID
+def call(String nameSpace = "cloudbees-sda") {
+  def bundleName = "oc-casc"
   def label = "kubectl"
   def podYaml = libraryResource 'podtemplates/kubectl.yml'
   
