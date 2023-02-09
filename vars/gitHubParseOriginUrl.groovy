@@ -4,7 +4,7 @@ def call() {
   env.GITHUB_REPO = env.GITHUB_ORIGIN_URL.tokenize('/').last().split("\\.git")[0]
   env.GITHUB_ORG = env.GITHUB_ORIGIN_URL.tokenize('/')[2]
   env.CONTROLLER_FOLDER = env.GITHUB_ORG.toLowerCase()
-  if(env.GITHUB_APP=="cloudbees-ci-workshop") {
+  if(env.GITHUB_APP=="cloudbees-ci-workshop-in-aws") {
     env.BUNDLE_ID = "${CONTROLLER_FOLDER}-controller"
   } else {
     env.BUNDLE_ID = "${CONTROLLER_FOLDER}-${GITHUB_REPO}"
